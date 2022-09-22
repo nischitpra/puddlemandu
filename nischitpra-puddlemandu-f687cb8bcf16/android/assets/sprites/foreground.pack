@@ -1,0 +1,152 @@
+
+foreground.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+foregroundTree2
+  rotate: false
+  xy: 1, 2711
+  size: 1920, 1383
+  orig: 1920, 1383
+  offset: 0, 0
+  index: -1
+foregroundTree1
+  rotate: false
+  xy: 1, 1383
+  size: 1920, 1326
+  orig: 1920, 1326
+  offset: 0, 0
+  index: -1
+foregroundTree0
+  rotate: false
+  xy: 1923, 2800
+  size: 1920, 1294
+  orig: 1920, 1294
+  offset: 0, 0
+  index: -1
+foregroundGrass0
+  rotate: false
+  xy: 1, 1061
+  size: 1920, 320
+  orig: 1920, 320
+  offset: 0, 0
+  index: -1
+foregroundStone0
+  rotate: false
+  xy: 1923, 2648
+  size: 1920, 150
+  orig: 1920, 150
+  offset: 0, 0
+  index: -1
+dust0
+  rotate: false
+  xy: 1, 495
+  size: 600, 564
+  orig: 600, 564
+  offset: 0, 0
+  index: -1
+dust2
+  rotate: false
+  xy: 1923, 2148
+  size: 510, 498
+  orig: 510, 498
+  offset: 0, 0
+  index: -1
+dust1
+  rotate: false
+  xy: 1, 4
+  size: 513, 489
+  orig: 513, 489
+  offset: 0, 0
+  index: -1
+dust5
+  rotate: false
+  xy: 603, 609
+  size: 524, 450
+  orig: 524, 450
+  offset: 0, 0
+  index: -1
+dust4
+  rotate: false
+  xy: 2435, 2196
+  size: 524, 450
+  orig: 524, 450
+  offset: 0, 0
+  index: -1
+dust3
+  rotate: false
+  xy: 1129, 609
+  size: 524, 450
+  orig: 524, 450
+  offset: 0, 0
+  index: -1
+foregroundGrass1
+  rotate: false
+  xy: 603, 507
+  size: 512, 100
+  orig: 512, 100
+  offset: 0, 0
+  index: -1
+particle2
+  rotate: false
+  xy: 3845, 4062
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle0
+  rotate: false
+  xy: 1923, 2114
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle4
+  rotate: false
+  xy: 516, 461
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle5
+  rotate: false
+  xy: 2435, 2162
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle7
+  rotate: false
+  xy: 2961, 2614
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle3
+  rotate: false
+  xy: 1655, 1027
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle6
+  rotate: false
+  xy: 1117, 575
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+particle1
+  rotate: false
+  xy: 3845, 4028
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+rain
+  rotate: false
+  xy: 1, 1
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1

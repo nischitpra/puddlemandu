@@ -1,0 +1,194 @@
+
+background.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+hill
+  rotate: false
+  xy: 1, 3607
+  size: 2273, 469
+  orig: 2273, 469
+  offset: 0, 0
+  index: -1
+Patan Durbar
+  rotate: false
+  xy: 1, 2783
+  size: 1520, 822
+  orig: 1520, 822
+  offset: 0, 0
+  index: -1
+Basantapur
+  rotate: false
+  xy: 1, 1959
+  size: 1520, 822
+  orig: 1520, 822
+  offset: 0, 0
+  index: -1
+Buildings 0
+  rotate: false
+  xy: 2276, 3564
+  size: 1808, 512
+  orig: 1808, 512
+  offset: 0, 0
+  index: -1
+Buildings 2
+  rotate: false
+  xy: 1, 1445
+  size: 1525, 512
+  orig: 1525, 512
+  offset: 0, 0
+  index: -1
+Buildings 3
+  rotate: false
+  xy: 1, 931
+  size: 1515, 512
+  orig: 1515, 512
+  offset: 0, 0
+  index: -1
+jungle
+  rotate: false
+  xy: 1, 417
+  size: 1507, 512
+  orig: 1507, 512
+  offset: 0, 0
+  index: -1
+mountain
+  rotate: false
+  xy: 1, 134
+  size: 1024, 281
+  orig: 1024, 281
+  offset: 0, 0
+  index: -1
+Dharahara
+  rotate: false
+  xy: 1523, 2655
+  size: 352, 950
+  orig: 352, 950
+  offset: 0, 0
+  index: -1
+Swayambhu
+  rotate: false
+  xy: 1877, 2762
+  size: 1170, 800
+  orig: 1170, 800
+  offset: 0, 0
+  index: -1
+Patan Dhoka
+  rotate: false
+  xy: 3049, 3050
+  size: 802, 512
+  orig: 802, 512
+  offset: 0, 0
+  index: -1
+Buildings 4
+  rotate: false
+  xy: 1877, 2248
+  size: 1172, 512
+  orig: 1172, 512
+  offset: 0, 0
+  index: -1
+Pashupati
+  rotate: false
+  xy: 1528, 1596
+  size: 1317, 650
+  orig: 1317, 650
+  offset: 0, 0
+  index: -1
+Bouddha
+  rotate: false
+  xy: 1528, 794
+  size: 1167, 800
+  orig: 1167, 800
+  offset: 0, 0
+  index: -1
+pole
+  rotate: false
+  xy: 1510, 594
+  size: 1064, 198
+  orig: 1064, 198
+  offset: 0, 0
+  index: -1
+poleLight
+  rotate: false
+  xy: 1510, 394
+  size: 1064, 198
+  orig: 1064, 198
+  offset: 0, 0
+  index: -1
+tree3
+  rotate: false
+  xy: 2847, 1696
+  size: 425, 550
+  orig: 425, 550
+  offset: 0, 0
+  index: -1
+tree4
+  rotate: false
+  xy: 2697, 1059
+  size: 338, 535
+  orig: 338, 535
+  offset: 0, 0
+  index: -1
+tree5
+  rotate: false
+  xy: 3037, 1182
+  size: 397, 512
+  orig: 397, 512
+  offset: 0, 0
+  index: -1
+sky
+  rotate: false
+  xy: 1, 1
+  size: 512, 131
+  orig: 512, 131
+  offset: 0, 0
+  index: -1
+tree0
+  rotate: false
+  xy: 3051, 2536
+  size: 415, 512
+  orig: 415, 512
+  offset: 0, 0
+  index: -1
+tree2
+  rotate: false
+  xy: 3468, 2598
+  size: 461, 450
+  orig: 461, 450
+  offset: 0, 0
+  index: -1
+tree1
+  rotate: false
+  xy: 2697, 707
+  size: 487, 350
+  orig: 487, 350
+  offset: 0, 0
+  index: -1
+tree6
+  rotate: false
+  xy: 3186, 680
+  size: 325, 500
+  orig: 325, 500
+  offset: 0, 0
+  index: -1
+night
+  rotate: false
+  xy: 1523, 2370
+  size: 14, 283
+  orig: 14, 283
+  offset: 0, 0
+  index: -1
+skyFilter2
+  rotate: false
+  xy: 3051, 2251
+  size: 14, 283
+  orig: 14, 283
+  offset: 0, 0
+  index: -1
+skyFilter1
+  rotate: false
+  xy: 1027, 279
+  size: 10, 136
+  orig: 10, 136
+  offset: 0, 0
+  index: -1

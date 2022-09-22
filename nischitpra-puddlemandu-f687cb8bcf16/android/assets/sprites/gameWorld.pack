@@ -1,0 +1,360 @@
+
+gameWorld.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Maichyang
+  rotate: false
+  xy: 1, 3874
+  size: 4000, 208
+  orig: 4000, 208
+  offset: 0, 0
+  index: -1
+highscore
+  rotate: false
+  xy: 4003, 3875
+  size: 64, 207
+  orig: 64, 207
+  offset: 0, 0
+  index: -1
+groundExtender
+  rotate: false
+  xy: 4069, 4081
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+bolt
+  rotate: false
+  xy: 4072, 4081
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+coin
+  rotate: false
+  xy: 4003, 3810
+  size: 63, 63
+  orig: 63, 63
+  offset: 0, 0
+  index: -1
+Lakhe Full
+  rotate: false
+  xy: 1, 3653
+  size: 3500, 219
+  orig: 3500, 219
+  offset: 0, 0
+  index: -1
+tractor
+  rotate: false
+  xy: 3503, 3559
+  size: 589, 249
+  orig: 589, 249
+  offset: 0, 0
+  index: -1
+ostrich
+  rotate: false
+  xy: 1, 3405
+  size: 3300, 246
+  orig: 3300, 246
+  offset: 0, 0
+  index: -1
+microbus
+  rotate: false
+  xy: 3303, 3285
+  size: 614, 272
+  orig: 614, 272
+  offset: 0, 0
+  index: -1
+dog0
+  rotate: false
+  xy: 1, 3219
+  size: 3250, 184
+  orig: 3250, 184
+  offset: 0, 0
+  index: -1
+beetleCar
+  rotate: false
+  xy: 3253, 3049
+  size: 595, 234
+  orig: 595, 234
+  offset: 0, 0
+  index: -1
+Lakhe
+  rotate: false
+  xy: 1, 2993
+  size: 3080, 224
+  orig: 3080, 224
+  offset: 0, 0
+  index: -1
+ground9
+  rotate: false
+  xy: 3083, 2819
+  size: 1000, 228
+  orig: 1000, 228
+  offset: 0, 0
+  index: -1
+Buddy
+  rotate: false
+  xy: 1, 2769
+  size: 2880, 222
+  orig: 2880, 222
+  offset: 0, 0
+  index: -1
+ground5
+  rotate: false
+  xy: 2883, 2464
+  size: 1178, 353
+  orig: 1178, 353
+  offset: 0, 0
+  index: -1
+Billy
+  rotate: false
+  xy: 1, 2548
+  size: 2400, 219
+  orig: 2400, 219
+  offset: 0, 0
+  index: -1
+lightning
+  rotate: false
+  xy: 2403, 2527
+  size: 320, 240
+  orig: 320, 240
+  offset: 0, 0
+  index: -1
+Stickman
+  rotate: false
+  xy: 1, 2332
+  size: 2400, 214
+  orig: 2400, 214
+  offset: 0, 0
+  index: -1
+ground11
+  rotate: false
+  xy: 2403, 2121
+  size: 1659, 341
+  orig: 1659, 341
+  offset: 0, 0
+  index: -1
+Alibubu
+  rotate: false
+  xy: 1, 2117
+  size: 2400, 213
+  orig: 2400, 213
+  offset: 0, 0
+  index: -1
+puddle9
+  rotate: false
+  xy: 2403, 1763
+  size: 1651, 356
+  orig: 1651, 356
+  offset: 0, 0
+  index: -1
+Alibuba
+  rotate: false
+  xy: 1, 1902
+  size: 2400, 213
+  orig: 2400, 213
+  offset: 0, 0
+  index: -1
+dog1
+  rotate: false
+  xy: 1, 1761
+  size: 2310, 139
+  orig: 2310, 139
+  offset: 0, 0
+  index: -1
+cloud0
+  rotate: false
+  xy: 2313, 1568
+  size: 1575, 193
+  orig: 1575, 193
+  offset: 0, 0
+  index: -1
+cloud1
+  rotate: false
+  xy: 1, 1584
+  size: 2128, 175
+  orig: 2128, 175
+  offset: 0, 0
+  index: -1
+cloud2
+  rotate: false
+  xy: 1, 1413
+  size: 2128, 169
+  orig: 2128, 169
+  offset: 0, 0
+  index: -1
+Pinokia
+  rotate: false
+  xy: 2131, 1364
+  size: 1875, 202
+  orig: 1875, 202
+  offset: 0, 0
+  index: -1
+zombie
+  rotate: false
+  xy: 1, 1198
+  size: 2040, 213
+  orig: 2040, 213
+  offset: 0, 0
+  index: -1
+chicken
+  rotate: false
+  xy: 2043, 1222
+  size: 1849, 140
+  orig: 1849, 140
+  offset: 0, 0
+  index: -1
+ground13
+  rotate: false
+  xy: 2043, 871
+  size: 1805, 349
+  orig: 1805, 349
+  offset: 0, 0
+  index: -1
+ground8
+  rotate: false
+  xy: 1, 809
+  size: 1800, 387
+  orig: 1800, 387
+  offset: 0, 0
+  index: -1
+puddle2
+  rotate: false
+  xy: 1, 295
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+tampo
+  rotate: false
+  xy: 1, 13
+  size: 530, 280
+  orig: 530, 280
+  offset: 0, 0
+  index: -1
+ground6
+  rotate: false
+  xy: 515, 378
+  size: 1319, 429
+  orig: 1319, 429
+  offset: 0, 0
+  index: -1
+sajhaBus
+  rotate: false
+  xy: 533, 1
+  size: 1081, 375
+  orig: 1081, 375
+  offset: 0, 0
+  index: -1
+ground7
+  rotate: false
+  xy: 1616, 19
+  size: 1083, 357
+  orig: 1083, 357
+  offset: 0, 0
+  index: -1
+ground12
+  rotate: false
+  xy: 1836, 459
+  size: 1434, 410
+  orig: 1434, 410
+  offset: 0, 0
+  index: -1
+puddle3
+  rotate: false
+  xy: 2701, 101
+  size: 512, 356
+  orig: 512, 356
+  offset: 0, 0
+  index: -1
+ground4
+  rotate: false
+  xy: 3215, 110
+  size: 512, 347
+  orig: 512, 347
+  offset: 0, 0
+  index: -1
+motorcycle1
+  rotate: false
+  xy: 3729, 603
+  size: 311, 266
+  orig: 311, 266
+  offset: 0, 0
+  index: -1
+motorcycle0
+  rotate: false
+  xy: 3729, 336
+  size: 311, 265
+  orig: 311, 265
+  offset: 0, 0
+  index: -1
+
+gameWorld2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+ground14
+  rotate: false
+  xy: 1, 282
+  size: 968, 225
+  orig: 968, 225
+  offset: 0, 0
+  index: -1
+puddle8
+  rotate: false
+  xy: 971, 191
+  size: 512, 316
+  orig: 512, 316
+  offset: 0, 0
+  index: -1
+ground1
+  rotate: false
+  xy: 1485, 191
+  size: 512, 316
+  orig: 512, 316
+  offset: 0, 0
+  index: -1
+puddle1
+  rotate: false
+  xy: 1999, 180
+  size: 512, 327
+  orig: 512, 327
+  offset: 0, 0
+  index: -1
+puddle7
+  rotate: false
+  xy: 2513, 167
+  size: 512, 340
+  orig: 512, 340
+  offset: 0, 0
+  index: -1
+ground3
+  rotate: false
+  xy: 3027, 171
+  size: 512, 336
+  orig: 512, 336
+  offset: 0, 0
+  index: -1
+ground2
+  rotate: false
+  xy: 3541, 180
+  size: 512, 327
+  orig: 512, 327
+  offset: 0, 0
+  index: -1
+puddle0
+  rotate: false
+  xy: 1, 90
+  size: 512, 190
+  orig: 512, 190
+  offset: 0, 0
+  index: -1
+ground0
+  rotate: false
+  xy: 515, 1
+  size: 512, 188
+  orig: 512, 188
+  offset: 0, 0
+  index: -1
