@@ -54,22 +54,22 @@ public class CharacterPickerStage extends Stage {
 
 
         textureList=new Array<Array<String>>();
-        textureList.add(new Array<String>(new String[]{"Pinokia","false","4000"}));
+        textureList.add(new Array<String>(new String[]{"Pinokia","false","40"}));
         textureList.add(new Array<String>(new String[]{"Alibuba","false","0"}));
-        textureList.add(new Array<String>(new String[]{"Buddy","false","200"}));
-        textureList.add(new Array<String>(new String[]{"Maichyang","false","200"}));
-        textureList.add(new Array<String>(new String[]{"Stickman","false","500"}));
-        textureList.add(new Array<String>(new String[]{"Alibubu","false","500"}));
-        textureList.add(new Array<String>(new String[]{"Lakhe","false","1000"}));
-        textureList.add(new Array<String>(new String[]{"Lakhe Full","false","1000"}));
-        textureList.add(new Array<String>(new String[]{"Billy","false","1000"}));
+        textureList.add(new Array<String>(new String[]{"Buddy","false","2"}));
+        textureList.add(new Array<String>(new String[]{"Maichyang","false","2"}));
+        textureList.add(new Array<String>(new String[]{"Stickman","false","5"}));
+        textureList.add(new Array<String>(new String[]{"Alibubu","false","5"}));
+        textureList.add(new Array<String>(new String[]{"Lakhe","false","10"}));
+        textureList.add(new Array<String>(new String[]{"Lakhe Full","false","10"}));
+        textureList.add(new Array<String>(new String[]{"Billy","false","10"}));
 //        textureList.add(new Array<String>(new String[]{"Ghost","false","1000"}));
-        textureList.add(new Array<String>(new String[]{"zombie","true","2000"}));
-        textureList.add(new Array<String>(new String[]{"dog0","true","2000"}));
-        textureList.add(new Array<String>(new String[]{"dog1","true","2000"}));
+        textureList.add(new Array<String>(new String[]{"zombie","true","20"}));
+        textureList.add(new Array<String>(new String[]{"dog0","true","20"}));
+        textureList.add(new Array<String>(new String[]{"dog1","true","20"}));
 //        textureList.add(new Array<String>(new String[]{"cow","true","2000"}));
-        textureList.add(new Array<String>(new String[]{"ostrich","true","3000"}));
-        textureList.add(new Array<String>(new String[]{"chicken","true","3000"}));
+        textureList.add(new Array<String>(new String[]{"ostrich","true","30"}));
+        textureList.add(new Array<String>(new String[]{"chicken","true","30"}));
 
         walkAnimationList=new Array<Animation<TextureRegion>>();
         for(int i=0;i<textureList.size;i++){
