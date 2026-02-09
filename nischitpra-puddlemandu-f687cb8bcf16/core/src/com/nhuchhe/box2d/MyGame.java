@@ -37,6 +37,12 @@ public class MyGame extends Game {
 
 	@Override
 	public void create() {
+		Constants.init();
+		System.out.println("Gdx.graphics: w=" + Gdx.graphics.getWidth()
+				+ " h=" + Gdx.graphics.getHeight()
+				+ " bbW=" + Gdx.graphics.getBackBufferWidth()
+				+ " bbH=" + Gdx.graphics.getBackBufferHeight()
+		);
 		game=this;
 		world=new World(new Vector2(0,0f),true);
 		world.setGravity(new Vector2(0,Constants.GRAVITY));
@@ -84,6 +90,17 @@ public class MyGame extends Game {
 		this.setScreen(new SplashScreen(game));
 		System.out.println("inside create of MyGame");
 
+	}
+
+	@Override
+	public void resize(int width, int height) {
+		Constants.init();
+		System.out.println("Gdx.graphics(resize): w=" + Gdx.graphics.getWidth()
+				+ " h=" + Gdx.graphics.getHeight()
+				+ " bbW=" + Gdx.graphics.getBackBufferWidth()
+				+ " bbH=" + Gdx.graphics.getBackBufferHeight()
+		);
+		super.resize(width, height);
 	}
 
 	@Override

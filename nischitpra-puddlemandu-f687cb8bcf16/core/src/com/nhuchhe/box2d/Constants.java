@@ -17,12 +17,18 @@ public class Constants {
      * then multiply by camera width or height
      */
 
-    public static final float CAMERA_WIDTH=Gdx.graphics.getWidth() ;
-    public static final float CAMERA_HEIGHT=Gdx.graphics.getHeight() ;
+    /**
+     * NOTE: Do NOT read Gdx.graphics.* in static initializers (platforms can report
+     * temporary/incorrect values during startup, and iOS HDPI can introduce mismatched
+     * coordinate spaces). Call {@link #init()} from {@link MyGame#create()} and
+     * {@link MyGame#resize(int, int)}.
+     */
+    public static float CAMERA_WIDTH;
+    public static float CAMERA_HEIGHT;
 
     //this scaling is for box2d
-    public static final float WIDTH= (CAMERA_WIDTH/CAMERA_HEIGHT)*10.0f;
-    public static final float HEIGHT=10.0f;
+    public static float WIDTH;
+    public static float HEIGHT;
     public static final Vector2 SCALE=new Vector2(0.008f,0.008f);
     public static final int TEXT_SIZE_BIG=128;
     public static final int TEXT_SIZE_SMALL=64;
@@ -33,10 +39,10 @@ public class Constants {
     public static final float FACT_SPEED=12;
 
     // random area for creating new bolt position
-    public static final Vector2 GRAPH_EDGE=new Vector2(WIDTH*0.28f,HEIGHT*0.14f);
+    public static Vector2 GRAPH_EDGE;
 
     public static final int GUIDE=12;
-    public static final float BUTTON_HEIGHT=Constants.CAMERA_HEIGHT/ GUIDE;
+    public static float BUTTON_HEIGHT;
 
 
     public static final long TAP=50000000;
@@ -83,6 +89,18 @@ public class Constants {
 
 
     public static Array<Body> deadBodies=new Array();
+
+    public static void init() {
+        // Use the same coordinate space as input + Stage's default viewport.
+        // (If iOS HDPI is enabled, prefer turning it off in IOSLauncher for this legacy, pixel-based layout.)
+        CAMERA_WIDTH = Gdx.graphics.getWidth();
+        CAMERA_HEIGHT = Gdx.graphics.getHeight();
+
+        WIDTH = (CAMERA_WIDTH / CAMERA_HEIGHT) * 10.0f;
+        HEIGHT = 10.0f;
+        GRAPH_EDGE = new Vector2(WIDTH * 0.28f, HEIGHT * 0.14f);
+        BUTTON_HEIGHT = CAMERA_HEIGHT / GUIDE;
+    }
 
     public static void reset(){
         MOVE_DIRECTION=1;

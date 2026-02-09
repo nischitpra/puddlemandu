@@ -71,7 +71,8 @@ public class GameScreen implements Screen {
 
         camera=new OrthographicCamera();
         camera.setToOrtho(false,Constants.CAMERA_WIDTH,Constants.CAMERA_HEIGHT);
-        camera.position.set(0,0,0);
+        // Center the camera so (0,0) is bottom-left in world coordinates.
+        camera.position.set(Constants.CAMERA_WIDTH / 2f, Constants.CAMERA_HEIGHT / 2f, 0);
 
 //        camera.zoom=2f;
         playerCamera.zoom=0.01f;
@@ -249,13 +250,17 @@ public class GameScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        camera.viewportWidth=width;
-        camera.viewportHeight=height;
-        camera.position.set(width/2f,height/2f,0);
+        // Keep cameras in the same coordinate space as Constants (legacy code assumes this).
+        // On iOS, width/height can differ from the expected space (HDPI); use Constants instead.
+        camera.setToOrtho(false, Constants.CAMERA_WIDTH, Constants.CAMERA_HEIGHT);
+        camera.position.set(Constants.CAMERA_WIDTH / 2f, Constants.CAMERA_HEIGHT / 2f, 0);
 
-        playerCamera.viewportWidth=width;
-        playerCamera.viewportHeight=height;
-        playerCamera.position.set(width/2,height/2,0);
+        playerCamera.setToOrtho(false, Constants.CAMERA_WIDTH, Constants.CAMERA_HEIGHT);
+        // playerCamera position is driven by character in updateFunction()
+
+        // Ensure Stage viewports track screen changes too.
+        if (hud != null) hud.getViewport().update(width, height, true);
+        if (controller != null) controller.getViewport().update(width, height, true);
 
     }
 

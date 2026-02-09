@@ -28,6 +28,12 @@
                 <include>**/*</include>
             </includes>
         </resource>
+        <resource>
+            <directory>.</directory>
+            <includes>
+                <include>LaunchScreen.storyboard</include>
+            </includes>
+        </resource>
     </resources>
 
     <infoPList>Info.plist.xml</infoPList>
