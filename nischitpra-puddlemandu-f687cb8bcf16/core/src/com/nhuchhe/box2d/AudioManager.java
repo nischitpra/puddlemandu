@@ -57,9 +57,9 @@ public class AudioManager {
         }
         else{
             if(isVehicle){
-                playSound(s);
-            }else{
                 playVehicleSound(s);
+            }else{
+                playSound(s);
             }
         }
     }

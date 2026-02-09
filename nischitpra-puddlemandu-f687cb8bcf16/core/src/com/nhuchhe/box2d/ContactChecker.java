@@ -30,8 +30,7 @@ public class ContactChecker implements ContactListener {
 
         if(fixtureA.getUserData()==Constants.FOOT_DETECTOR||fixtureB.getUserData()==Constants.FOOT_DETECTOR){
             ((GameScreen)game.getScreen()).character.isGrounded=true;
-//            ((GameScreen)game.getScreen()).character.JUMP_COUNT=game.preferences.getInteger(Constants.JUMP);
-            ((GameScreen)game.getScreen()).character.JUMP_COUNT=999999;
+            ((GameScreen)game.getScreen()).character.JUMP_COUNT=game.preferences.getInteger(Constants.JUMP);
         }
         if(nonPlayerFixture.getUserData()==Constants.COIN){
             nonPlayerFixture.setUserData(Constants.DEAD);

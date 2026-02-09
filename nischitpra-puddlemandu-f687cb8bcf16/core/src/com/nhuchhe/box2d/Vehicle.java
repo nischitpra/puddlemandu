@@ -137,6 +137,10 @@ public class Vehicle  {
     }
 
     public void dispose() {
+        // Ensure any looping vehicle/ambient sounds are stopped when leaving the GameScreen.
+        while(sound_string.size > 0) {
+            stopSound();
+        }
         Iterator<GameObject> iterator=activeVehicle.iterator();
         while(iterator.hasNext()){
             temp=iterator.next();
@@ -195,29 +199,29 @@ public class Vehicle  {
         if(sound_string.size==0) return;
 
         String s=sound_string.removeIndex(0);
-        if(s=="bus"){
+        if("bus".equals(s)){
             game.audioManager.stopSound_Bus();
-        } else if(s=="motorcycle_0"){
+        } else if("motorcycle_0".equals(s)){
             game.audioManager.stopSound_Motorcycle_0();
-        } else if(s=="motorcycle_1"){
+        } else if("motorcycle_1".equals(s)){
             game.audioManager.stopSound_Motorcycle_1();
-        } else if(s=="tampo"){
+        } else if("tampo".equals(s)){
             game.audioManager.stopSound_Motorcycle_0();
-        } else if(s=="car"){
+        } else if("car".equals(s)){
             game.audioManager.stopSound_Car();
-        } else if(s=="dog"){
+        } else if("dog".equals(s)){
             game.audioManager.stopSound_Dog_0();
             game.audioManager.stopSound_Dog_1();
-        } else if(s=="cow"){
+        } else if("cow".equals(s)){
             game.audioManager.stopSound_Cow();
-        } else if(s=="zombie"){
+        } else if("zombie".equals(s)){
             game.audioManager.stopSound_Zombie_0();
             game.audioManager.stopSound_Zombie_1();
-        } else if(s=="chicken"){
+        } else if("chicken".equals(s)){
             game.audioManager.stopSound_Chicken_0();
-        } else if(s=="ostrich"){
+        } else if("ostrich".equals(s)){
             game.audioManager.stopSound_Chicken_0();
-        } else if(s=="tractor"){
+        } else if("tractor".equals(s)){
             game.audioManager.stopSound_Car();
         }
 
