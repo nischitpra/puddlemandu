@@ -32,6 +32,7 @@
             <directory>.</directory>
             <includes>
                 <include>LaunchScreen.storyboard</include>
+                <include>Icon*.png</include>
             </includes>
         </resource>
     </resources>
