@@ -68,6 +68,7 @@ public class MainMenuStage extends Stage {
         factList.add("Dharahara was the tallest building in Nepal");
 
         factIndex=game.preferences.getInteger(Constants.FACT_INDEX);
+        if (factIndex < 0 || factIndex >= factList.size) factIndex = 0;
 
         table =new Table();
 
@@ -182,13 +183,15 @@ public class MainMenuStage extends Stage {
 
 
     private void renderFact(){
+        if (factList.size == 0) return;
         if(TimeUtils.nanoTime()-lastFact>Constants.NANOSECOND*Constants.FACT_SPEED){
             lastFact=TimeUtils.nanoTime();
             facts.addAction(Actions.sequence(Actions.alpha(1),Actions.fadeOut(Constants.ANIMATION_DURATION*6),
                     Actions.run(new Runnable() {
                         @Override
                         public void run() {
-                            facts.setText(factList.get(factIndex>=factList.size?0:factIndex++));
+                            facts.setText(factList.get(factIndex));
+                            factIndex = (factIndex + 1) % factList.size;
                         }
                     }),Actions.fadeIn(Constants.ANIMATION_DURATION*6)));
         }
