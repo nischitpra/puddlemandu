@@ -48,12 +48,22 @@ public class Background {
         LANDMARK_DENSITY=MathUtils.random(2,3);
         int maxTextureQueue=10;
 
-        sky=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,3,maxTextureQueue,scale_sky,Constants.CAMERA_HEIGHT*0.45f,movespeed_sky);
-        mountain=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,3,maxTextureQueue,scale_mountain,Constants.CAMERA_HEIGHT*0.4f,movespeed_mountain);
-        hill=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,3,maxTextureQueue,scale_hill,Constants.CAMERA_HEIGHT*0.3f,movespeed_hill);
-        miscellaneous=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,4,maxTextureQueue,scale_miscellaneous,Constants.CAMERA_HEIGHT*0.09f,movespeed_miscellaneous);
-        building=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,9,maxTextureQueue,scale_building,Constants.CAMERA_HEIGHT*0.1f,movespeed_building);
-        pole=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,3,maxTextureQueue,scale_pole,Constants.CAMERA_HEIGHT*0.1f,movespeed_pole);
+        // Ensure each layer has enough tiles to cover ultra-wide devices.
+        int skySize = Math.max(3, tilesFor("sky", scale_sky));
+        int mountainSize = Math.max(3, tilesFor("mountain", scale_mountain));
+        int hillSize = Math.max(3, tilesFor("hill", scale_hill));
+        int miscSize = Math.max(4, tilesFor("jungle", scale_miscellaneous));
+        int buildingSize = Math.max(9, tilesFor("Buildings 0", scale_building));
+        int poleSize = Math.max(3, tilesFor("pole", scale_pole));
+
+        // Align sky to the top of the screen so it doesn't get clipped on ultra-wide devices.
+        float skyY = Constants.CAMERA_HEIGHT - game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_BACKGROUND, "sky").getRegionHeight() * scale_sky;
+        sky=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,skySize,maxTextureQueue,scale_sky,skyY,movespeed_sky);
+        mountain=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,mountainSize,maxTextureQueue,scale_mountain,Constants.CAMERA_HEIGHT*0.4f,movespeed_mountain);
+        hill=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,hillSize,maxTextureQueue,scale_hill,Constants.CAMERA_HEIGHT*0.3f,movespeed_hill);
+        miscellaneous=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,miscSize,maxTextureQueue,scale_miscellaneous,Constants.CAMERA_HEIGHT*0.09f,movespeed_miscellaneous);
+        building=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,buildingSize,maxTextureQueue,scale_building,Constants.CAMERA_HEIGHT*0.1f,movespeed_building);
+        pole=new CircularQueue(game,Constants.TEXTURE_ATLAS_BACKGROUND,poleSize,maxTextureQueue,scale_pole,Constants.CAMERA_HEIGHT*0.1f,movespeed_pole);
 
         counter=0;
 
@@ -131,6 +141,13 @@ public class Background {
         skyFilter.setPosition(0,Constants.CAMERA_HEIGHT*0.1f);
         skyFilter.setSize(Constants.CAMERA_WIDTH,Constants.CAMERA_HEIGHT);
 
+    }
+
+    private int tilesFor(String textureName, float scale) {
+        float tileW = game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_BACKGROUND, textureName).getRegionWidth() * scale;
+        if (tileW <= 0) return 3;
+        // +2 for safety (offscreen + rounding)
+        return (int)Math.ceil(Constants.CAMERA_WIDTH / tileW) + 2;
     }
     private void fillRandom(CircularQueue queue,Array<String> array){
         for(int i=0;i<queue.MAX_TEXTURE_SIZE;i++){

@@ -152,22 +152,17 @@ public class MainMenuScreen implements Screen {
         //background
         scale=4.6f;
         t=game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_BACKGROUND,"sky");
-        game.batch.draw(t,0,Constants.CAMERA_HEIGHT*0.45f,t.getRegionWidth()*scale,t.getRegionHeight()*scale);
+        // Tile + align to top so ultra-wide devices are covered without cropping.
+        drawTiledX(t, Constants.CAMERA_HEIGHT - t.getRegionHeight() * scale, scale);
         scale=2f;
         t=game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_BACKGROUND,"mountain");
-        game.batch.draw(t,0,Constants.CAMERA_HEIGHT*0.4f,t.getRegionWidth()*scale,t.getRegionHeight()*scale);
+        drawTiledX(t, Constants.CAMERA_HEIGHT * 0.4f, scale);
         scale=1f;
         t=game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_BACKGROUND,"hill");
-        game.batch.draw(t,0,Constants.CAMERA_HEIGHT*0.3f,t.getRegionWidth()*scale,t.getRegionHeight()*scale);
+        drawTiledX(t, Constants.CAMERA_HEIGHT * 0.3f, scale);
         scale=1.1f;
         t=game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_BACKGROUND,"jungle");
-        game.batch.draw(t,0,Constants.CAMERA_HEIGHT*0.09f,t.getRegionWidth()*scale,t.getRegionHeight()*scale);
-        game.batch.draw(t,t.getRegionWidth()*scale,Constants.CAMERA_HEIGHT*0.09f,t.getRegionWidth()*scale,t.getRegionHeight()*scale);
-
-        scale=1f;
-        t=game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_BACKGROUND,"jungle");
-        game.batch.draw(t,0,Constants.CAMERA_HEIGHT*0.09f,t.getRegionWidth()*scale,t.getRegionHeight()*scale);
-        game.batch.draw(t,t.getRegionWidth()*scale,Constants.CAMERA_HEIGHT*0.09f,t.getRegionWidth()*scale,t.getRegionHeight()*scale);
+        drawTiledX(t, Constants.CAMERA_HEIGHT * 0.09f, scale);
 
 
         //highscore landmark
@@ -297,6 +292,15 @@ public class MainMenuScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
+    }
+
+    private void drawTiledX(TextureRegion region, float y, float scale) {
+        float w = region.getRegionWidth() * scale;
+        float h = region.getRegionHeight() * scale;
+        // draw 1 extra tile to avoid seams on the far right due to float rounding.
+        for (float x = 0; x <= Constants.CAMERA_WIDTH + w; x += w) {
+            game.batch.draw(region, x, y, w, h);
+        }
     }
 
     @Override
