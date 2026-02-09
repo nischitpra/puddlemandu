@@ -60,7 +60,7 @@ public class MainMenuStage extends Stage {
         factList.add("Nepal was the birth place of Lord Gautam Buddha");
         factList.add("Nepal is the only country with a triangular flag");
         factList.add("Swayambhunath is nicknamed The Monkey Temple");
-        factList.add("Kathmandu Valley used to be a huge lake surrounded with the Himalayas");
+        factList.add("Kathmandu Valley used to be a huge lake surrounded by the Himalayas");
         factList.add("Kathmandu got its name from the temple Kaasthamandap built entirely with one tree");
         factList.add("Namaste is the way to greet in Nepal");
         factList.add("Freak Street was where the hipsters rolled");

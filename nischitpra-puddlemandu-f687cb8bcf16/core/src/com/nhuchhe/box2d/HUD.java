@@ -102,7 +102,7 @@ public class HUD extends Stage {
         game.batch.end();
         game.batch.begin();
         //remove this
-        game.font_small.draw(game.batch, Gdx.graphics.getFramesPerSecond() + "", Constants.CAMERA_WIDTH * 0.75f, Constants.CAMERA_HEIGHT * 0.95f);
+        // game.font_small.draw(game.batch, Gdx.graphics.getFramesPerSecond() + "", Constants.CAMERA_WIDTH * 0.75f, Constants.CAMERA_HEIGHT * 0.95f);
         game.batch.end();
         game.batch.begin();
 
