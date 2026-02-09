@@ -1,0 +1,34 @@
+plugins {
+    id "java-library"
+}
+
+def legacyRoot = file("../../nischitpra-puddlemandu-f687cb8bcf16")
+
+java {
+    // Android Gradle Plugin requires JDK 17 to run; we keep the *bytecode* at 8 for Android compatibility.
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            // Reuse the legacy sources without physically copying them.
+            srcDirs = ["${legacyRoot}/core/src"]
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+    // Compile to Java 8 bytecode so D8/desugaring is happy.
+    options.release = 8
+}
+
+dependencies {
+    api "com.badlogicgames.gdx:gdx:${rootProject.ext.gdxVersion}"
+    api "com.badlogicgames.gdx:gdx-box2d:${rootProject.ext.gdxVersion}"
+    api "com.badlogicgames.gdx:gdx-freetype:${rootProject.ext.gdxVersion}"
+}
+

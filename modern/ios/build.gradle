@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.mobidevelop.robovm:robovm-gradle-plugin:${rootProject.ext.robovmVersion}"
+    }
+}
+
+apply plugin: "java"
+apply plugin: "robovm"
+
+java {
+    // RoboVM's toolchain is happiest when we compile to Java 8 bytecode.
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+    options.release = 8
+}
+
+ext {
+    // Entry point for RoboVM.
+    // Must be a plain java.lang.String (not a Groovy GString) for RoboVM plugin compatibility.
+    mainClassName = (rootProject.ext.appId + ".IOSLauncher").toString()
+}
+
+launchIPhoneSimulator.dependsOn(build)
+launchIPadSimulator.dependsOn(build)
+launchIOSDevice.dependsOn(build)
+createIPA.dependsOn(build)
+
+dependencies {
+    implementation project(":core")
+
+    implementation "com.badlogicgames.gdx:gdx-backend-robovm-metalangle:${rootProject.ext.gdxVersion}"
+    implementation "com.badlogicgames.gdx:gdx-platform:${rootProject.ext.gdxVersion}:natives-ios"
+    implementation "com.badlogicgames.gdx:gdx-box2d-platform:${rootProject.ext.gdxVersion}:natives-ios"
+    implementation "com.badlogicgames.gdx:gdx-freetype-platform:${rootProject.ext.gdxVersion}:natives-ios"
+
+    implementation "com.mobidevelop.robovm:robovm-cocoatouch:${rootProject.ext.robovmVersion}"
+    implementation "com.mobidevelop.robovm:robovm-rt:${rootProject.ext.robovmVersion}"
+}
+

@@ -1,0 +1,22 @@
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# ---- Gradle / Android ----
+**/.gradle/
+**/build/
+**/local.properties
+**/.cxx/
+
+# ---- Java ----
+*.class
+hs_err_pid*
+
+# ---- RoboVM / iOS ----
+**/robovm-build/
+

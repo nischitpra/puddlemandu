@@ -1,0 +1,13 @@
+plugins {
+    id "com.android.application" version "9.0.0" apply false
+}
+
+ext {
+    // Latest libGDX as of late 2025; works fine with modern Android builds.
+    gdxVersion = "1.14.0"
+    // Matches current gdx-liftoff defaults for libGDX 1.14.x projects.
+    robovmVersion = "2.3.23"
+    appId = "com.nhuchhe.box2d"
+    appName = "box2d"
+}
+

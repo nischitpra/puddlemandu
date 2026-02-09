@@ -39,7 +39,8 @@ allprojects {
 }
 
 project(":android") {
-    apply plugin: "android"
+    // Android Gradle Plugin 2.x expects this plugin id (not the legacy "android").
+    apply plugin: "com.android.application"
 
     configurations { natives }
 
