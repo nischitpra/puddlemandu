@@ -31,7 +31,8 @@ public class MainMenuScreen implements Screen {
     private OrthographicCamera camera;
     private CharacterPickerStage characterPickerStage;
     private MainMenuStage mainMenuStage;
-    private CoinBaseStage coinBaseStage;
+    // Shop removed (coin click no longer opens CoinBaseStage).
+    // private CoinBaseStage coinBaseStage;
     private SettingsStage settingsStage;
     private Stage commonStage;
 
@@ -58,7 +59,6 @@ public class MainMenuScreen implements Screen {
         this.game=game;
         this.characterPickerStage =new CharacterPickerStage(game);
         this.mainMenuStage=new MainMenuStage(game);
-        this.coinBaseStage=new CoinBaseStage(game);
         this.settingsStage=new SettingsStage(game);
         this.commonStage=new Stage();
         this.inputMultiplexer=new InputMultiplexer();
@@ -118,20 +118,9 @@ public class MainMenuScreen implements Screen {
         coinTable.setSize(coinTable.getWidth()*1.3f,coinTable.getHeight()*1.5f);
         coinTable.setPosition(Constants.CAMERA_WIDTH*0.975f-coinTable.getWidth(),Constants.CAMERA_HEIGHT*0.95f-coinTable.getHeight());
         coinTable.setBackground(new TextureRegionDrawable(game.resource.getTextureRegion(Constants.TEXTURE_ATLAS_HUD,"popUpBg")));
-
-        coinTable.addListener(new InputListener(){
-            @Override
-            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-                game.audioManager.play("button",false);
-                changeInputProcessor(2);
-                stageID=2;
-                return true;
-            }
-
-        });
+        // No click handler: coin display is informational only.
         commonStage.addActor(coinTable);
         characterPickerStage.addAction(Actions.alpha(0));
-        coinBaseStage.addAction(Actions.alpha(0));
         settingsStage.addAction(Actions.alpha(0));
 
         splashScreen.addAction(Actions.sequence(Actions.alpha(1),Actions.fadeOut(Constants.ANIMATION_DURATION*2)));
@@ -229,9 +218,6 @@ public class MainMenuScreen implements Screen {
             case 1:
                 inputMultiplexer.addProcessor(characterPickerStage);
                 break;
-            case 2:
-                inputMultiplexer.addProcessor(coinBaseStage);
-                break;
             case 3:
                 inputMultiplexer.addProcessor(settingsStage);
                 break;
@@ -252,9 +238,6 @@ public class MainMenuScreen implements Screen {
                 case 1:
                     characterPickerStage.addAction(Actions.sequence(Actions.alpha(1),Actions.fadeOut(1)));
                     break;
-                case 2:
-                    coinBaseStage.addAction(Actions.sequence(Actions.alpha(1),Actions.fadeOut(1)));
-                    break;
                 case 3:
                     settingsStage.addAction(Actions.sequence(Actions.alpha(1),Actions.fadeOut(1)));
                     break;
@@ -268,9 +251,6 @@ public class MainMenuScreen implements Screen {
                 case 1:
                     characterPickerStage.addAction(Actions.sequence(Actions.alpha(0),Actions.fadeIn(Constants.ANIMATION_DURATION)));
                     break;
-                case 2:
-                    coinBaseStage.addAction(Actions.sequence(Actions.alpha(0),Actions.fadeIn(Constants.ANIMATION_DURATION)));
-                    break;
                 case 3:
                     settingsStage.addAction(Actions.sequence(Actions.alpha(0),Actions.fadeIn(Constants.ANIMATION_DURATION)));
                     break;
@@ -282,7 +262,6 @@ public class MainMenuScreen implements Screen {
 
         mainMenuStage.render();
         characterPickerStage.render();
-        coinBaseStage.render();
         settingsStage.render();
 
         commonStage.act();
